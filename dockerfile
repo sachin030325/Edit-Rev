@@ -9,6 +9,8 @@ COPY ./backend /app
 WORKDIR /app
 RUN npm install
 COPY --from=frontend-builder /app/dist /app/public
+
+EXPOSE 10000
 CMD ["node", "server.js"]
 
 
