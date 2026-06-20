@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+
+.app-shell {
+  --shell-start: #09090b;
+  --shell-mid: #402462;
+  --shell-end: #0b55ad;
+  --panel: #1b1c1f;
+  --panel-deep: #111214;
+  --panel-raised: #2b2d31;
+  --line: rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, var(--shell-start), var(--shell-mid), var(--shell-end));
+  color: #f8fafc;
+}
+
+.app-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-panel,
+.editor-toolbar {
+  background: var(--panel);
+}
+
+.editor-panel,
+.editor-tab {
+  background: var(--panel-deep);
+}
+
+.editor-toolbar {
+  border-bottom: 1px solid var(--line);
+}
+
+.chat-panel {
+  background: var(--panel-deep);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.chat-header,
+.chat-form {
+  border-bottom: 1px solid var(--line);
+}
+
+.chat-form {
+  border-top: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+.chat-bubble {
+  color: #e5e7eb;
+}
+
+.chat-bubble-own {
+  background: linear-gradient(135deg, #6d3ed1, #2563eb);
+  color: white;
+  border-bottom-right-radius: 0.35rem;
+}
+
+.chat-bubble-other {
+  background: var(--panel-raised);
+  border-bottom-left-radius: 0.35rem;
+}
+
+.theme-light {
+  --shell-start: #eef2ff;
+  --shell-mid: #e9ddff;
+  --shell-end: #dbeafe;
+  --panel: rgba(255, 255, 255, 0.88);
+  --panel-deep: #f8fafc;
+  --panel-raised: #e9eef6;
+  --line: rgba(15, 23, 42, 0.1);
+  color: #172033;
+}
+
+.theme-light .app-header {
+  border-bottom-color: rgba(15, 23, 42, 0.1);
+}
+
+.theme-light .text-white,
+.theme-light .text-gray-100,
+.theme-light .text-gray-200,
+.theme-light .text-gray-300 {
+  color: #172033;
+}
+
+.theme-light .text-gray-400 {
+  color: #526176;
+}
+
+.theme-light .text-gray-500 {
+  color: #718096;
+}
+
+.theme-light .bg-\[\#2b2d31\] {
+  background-color: var(--panel-raised);
+}
+
+.theme-light .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.65);
+  color: #172033;
+}
+
+.theme-light .chat-bubble-own {
+  color: white;
+}
+
+.theme-light input {
+  color: #172033;
+}
